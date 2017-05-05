@@ -7,12 +7,12 @@
 
 # Tipos de Instalação
 
-* Instalação Estática;
-* Instalação com Ambientes Dinâmicos.
+* Instalação com Linux;
+* Instalação com Pip.
 
-# Instalação Estática
+# Instalação com Linux
 
-* É a instalação de um único ambiente Python e Django na sua máquina, assim você só pode essa configuração para criar seus projetos. Os comandos para essa instalação são:
+* É a instalação de um único ambiente Python e Django na sua máquina intermediada pelo sistema operacional local (Linux), assim você só pode essa configuração para criar seus projetos. Os comandos para essa instalação são:
 
 > sudo apt-get update
 > sudo apt-get install python
@@ -30,10 +30,30 @@
 
 > 1.6.11
 
-# Instalação Estática
+# Instalação com PIP
 
-* É a instalação de vários ambientes Python e Django na sua máquina, assim você só pode trocar a configuração de desenvolvimento por projeto. Essa é a mais recomendada. Os comandos para sua instalação são:
+* É a instalação de um único ambiente Python e Django na sua máquina intermediada pelo gerenciador de pacotes do Python (Pip), assim você pode desenvolver seu projeto. Os comandos para sua instalação são:
 
 > sudo apt-get update
 
-> 
+* Se estiver com a versão do Python inferior a 3, execute:
+
+> sudo apt-get install python-pip
+
+* Se seu Python for a versão 3, execute:
+
+> sudo apt-get install python3-pip
+
+* Após isso, execute para Python com versão inferior a 3:
+
+> sudo pip install django
+
+* Se for Python 3, instale o Django com o comando:
+
+> sudo pip3 install django
+
+* Para verificar sua instalação, basta executar o comando:
+
+> django-admin --version
+
+* O retorno vai ser o número da versão do Django instalado variável conforme o Python usado.
